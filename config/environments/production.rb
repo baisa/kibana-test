@@ -113,4 +113,5 @@ Rails.application.configure do
   config.lograge.enabled = true
   config.lograge.formatter = Lograge::Formatters::Logstash.new
   config.lograge.logger = LogStashLogger.new(type: :tcp, host: ENV.fetch('LOGSTASH_HOST', 'localhost'), port: 5000)
+  
 end
